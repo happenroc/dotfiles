@@ -10,6 +10,7 @@
 #   Kyle West <kswest@gmail.com>
 
 function prompt_kylewest_precmd {
+  current_time=`date "+%H:%M:%S"`
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
 
@@ -51,7 +52,7 @@ function prompt_kylewest_setup {
 
   # prompts
   PROMPT='%F{cyan}%c%f ${git_info[prompt]}${editor_info[keymap]} '
-  RPROMPT='%F{blue}${ruby_info[version]}'
+  RPROMPT='%F{24}${ruby_info[version]}[$current_time]'
 }
 
 prompt_kylewest_setup "$@"
