@@ -114,3 +114,13 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-g> :NERDTreeToggle<CR>
+
+set tags=./tags,tags;$HOME
+set updatetime=2000
+autocmd CursorHold,CursorHoldI * update
+set background=dark
+colorscheme solarized
