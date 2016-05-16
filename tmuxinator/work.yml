@@ -31,6 +31,9 @@ windows:
   - axt-ios:
     - cd IM4PS
     - clear
+  - axt-android:
+    - cd androidaxt
+    - clear
   - ischool_server:
     - cd ischool_server
     - clear
