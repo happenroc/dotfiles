@@ -1,0 +1,63 @@
+# ~/.tmuxinator/work.yml
+
+name: work
+root: ~/Documents/Work/Alo7/Project/AXT/Git
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t work
+
+windows:
+  - ischool_server:
+    - cd ischool_server
+    - clear
+  - database-server:
+      layout: even-horizontal
+      panes:
+        - database:
+          - cd ischool_server
+          - memcached -d
+          - redis-server /usr/local/etc/redis.conf
+          - be rails c
+        - server:
+          - cd ischool_server
+          - clear
+  - alo7_model:
+    - cd alo7_model
+    - clear
+  - murray:
+    - ssh murray
+    - clear
+  - lvmeng:
+    - ssh lvmeng
+    - clear
+  - dir:
+      layout: even-horizontal
+      panes:
+        - home:
+          - cd ~
+          - clear
+        - downloads:
+          - cd ~/Downloads
+          - clear
+

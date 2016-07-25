@@ -34,23 +34,6 @@ windows:
   - axt-android:
     - cd androidaxt
     - clear
-  - ischool_server:
-    - cd ischool_server
-    - clear
-  - database-server:
-      layout: even-horizontal
-      panes:
-        - database:
-          - cd ischool_server
-          - memcached -d
-          - redis-server /usr/local/etc/redis.conf
-          - be rails c
-        - server:
-          - cd ischool_server
-          - clear
-  - alo7_model:
-    - cd alo7_model
-    - clear
   - dir:
       layout: even-horizontal
       panes:
@@ -60,10 +43,4 @@ windows:
         - downloads:
           - cd ~/Downloads
           - clear
-  - murray:
-    - ssh murray
-    - clear
-  - lvmeng:
-    - ssh lvmeng
-    - clear
 
