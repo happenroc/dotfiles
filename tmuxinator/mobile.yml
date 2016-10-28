@@ -1,7 +1,7 @@
-# ~/.tmuxinator/work.yml
+# ~/.tmuxinator/mobile.yml
 
-name: work
-root: ~/Documents/Work/Alo7/Project/AXT/Git
+name: mobile
+root: ~/Developer/Alo7
 
 # Optional tmux socket
 # socket_name: foo
@@ -25,7 +25,7 @@ root: ~/Documents/Work/Alo7/Project/AXT/Git
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t work
+# post: tmux -CC attach -t mobile
 
 windows:
   - axt-ios:
