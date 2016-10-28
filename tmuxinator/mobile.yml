@@ -31,6 +31,9 @@ windows:
   - axt-ios:
     - cd IM4PS
     - clear
+  - axt-ios-api:
+    - cd IM4PS/Scripts/ApiGenerator
+    - clear
   - axt-android:
     - cd androidaxt
     - clear
